@@ -221,8 +221,12 @@ nav a:hover{
         text-decoration: none;
     color: white;
     background-color: #F85B12;
-    padding: 1.5rem 1rem;
+    padding: .5rem 1rem;
     border-radius: .5rem;
+    font-size: 10px;
 
+    }
+    .hdr{
+        margin-top: 10rem;
     }
 }    
