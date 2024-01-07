@@ -213,6 +213,16 @@ nav a:hover{
     nav{
         flex-direction:column ;
         text-align: center;
+        margin: 1rem 0;
         
+    }
+    .br2{
+        
+        text-decoration: none;
+    color: white;
+    background-color: #F85B12;
+    padding: 1.5rem 1rem;
+    border-radius: .5rem;
+
     }
 }    
