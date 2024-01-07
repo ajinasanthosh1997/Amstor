@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400&family=Dosis:wght@200&family=Fira+Sans:ital,wght@0,100;0,400;1,400&family=IBM+Plex+Sans&family=Montserrat:wght@100;500;600&family=Nunito:wght@200;300&family=Poppins:wght@300&family=Raleway:wght@100&family=Righteous&family=Roboto:wght@100&family=Source+Sans+3:wght@200&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9941501173.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    
+    <style>
+        .hamburger-icon {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .line {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color:#F85B12; /* Adjust the color as needed */
+            margin: 6px 0;
+        }
+
+        /* Adjust the width of the middle line */
+        .line:nth-child(2) {
+            width: 20px;
+        }
+
+        .hidden-list {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 999;
+        }
+
+        .hidden-close {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .hidden-close i {
+            font-size: 2.3rem;
+            color:#F85B12;
+            
+        }
+
+        .hidden-list ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 50px; /* Adjust as needed */
+        }
+
+        .hidden-list ul li {
+            margin: 20px 0;
+        }
+
+        .hidden-list a {
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="hdr" id="blue">
+        <a href="#">X</a>
+        <a href="#">Linkedin</a>
+        <a href="#">Facebook</a>
+    </div>
+    <header class="header">
+        <span id="mobilemenu">
+            <div class="hamburger-icon" id="menu-icon">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </span>
+        <a href="#"><img src="img/Vector (1).svg" class="hd-img"></a>
+        <div id="nav">
+            <nav>
+                <a href="#">About us</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+                <a href="#">Our Team</a>
+                <a href="#">Blog</a>
+                <a href="#">Career</a>
+                <a href="#">Contact us</a>
+            </nav>
+        </div>
+        <div>
+            <a href="#" class="br">Download Brochure</a>
+        </div>
+       
+       
+    </header>
+    <div class="hidden-list" id="hidden-div">
+        <div style="display: flex;align-items: center;gap: 1rem;">
+            <div class="hidden-close">
+                <i id="mmm" class="fa-regular fa-circle-xmark"></i>
+            </div>
+            <div>
+                <a href="#"><img src="img/Vector (1).svg" class="hd-img1"></a>
+            </div>
+        </div>
+        
+        <nav>
+            <a href="#">About us</a>
+            <a href="#">Products</a>
+            <a href="#">Services</a>
+            <a href="#">Our Team</a>
+            <a href="#">Blog</a>
+            <a href="#">Career</a>
+            <a href="#">Contact us</a>
+        </nav>
+        
+        <div>
+            <a href="#" class="br">Download Brochure</a>
+        </div>
+       
+        <div class="hdr">
+            <a href="#">X</a>
+            <a href="#">Linkedin</a>
+            <a href="#">Facebook</a>
+        </div>
+    </div>
+    <section class="section">
+        <div class="sec-flex">
+            <div class="sec-div">
+                <h1 class="sec-h1">Healthcare<br> Management Systems<br> for a connected future </h1>
+                <p class="p">“LeHealth” a specialised state of the art Healthcare Information<br> Management Software for transforming healthcare facilities into fully<br> automized digital environment.</p>
+                <div class="book">
+                    <a href="#" class="br1">Download Brochure</a>
+                    <a href="#" class="br1">Book a Demo</a>
+                </div>
+                <div class="sec-div2">
+                    <p>Regional Compliance & International Standards</p>
+                    <div class="sec-flex2">
+                        <img src="img/Frame 778.svg" alt="">
+                        <img src="img/hl7-cert 1.svg" alt="">
+                        <img src="img/malaffi-logo-vector.svg" alt="">
+                        <img src="img/NABIDH-500-x-325 1.svg" alt="">
+                        <img src="img/riayati.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <img src="img/Frame 741.svg" class="sec-img" >
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select elements
+            var menuIcon = document.getElementById('menu-icon');
+            var hiddenDiv = document.getElementById('hidden-div');
+            var closeIcon = document.getElementById('mmm');
+
+            // Toggle visibility when the icon is clicked
+            menuIcon.addEventListener('click', function () {
+                hiddenDiv.classList.toggle('hidden-list');
+            });
+
+            // Close the hidden division when the close icon is clicked
+            closeIcon.addEventListener('click', function () {
+                hiddenDiv.classList.toggle('hidden-list');
+            });
+        });
+    </script>
+</body>
+</html>
