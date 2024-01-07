@@ -73,6 +73,45 @@
         position: absolute;
         top: 0;
         background: white;
+        width: 17rem;
+        z-index: 1;
+        transform: translateX(-100%); /* Initially move the hidden div off-screen */
+        animation: slideIn 0.3s ease-in-out forwards; /* Use animation for the sliding effect */
+    }
+
+    .hidden-list.show {
+        animation: slideOut 0.3s ease-in-out forwards; /* Use a different animation for hiding */
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes slideOutReverse {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }#hidden-div {
+        position: absolute;
+        top: 0;
+        background: white;
         width: 24rem;
         z-index: 1;
         transform: translateX(-100%);
